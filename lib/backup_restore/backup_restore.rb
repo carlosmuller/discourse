@@ -111,7 +111,7 @@ module BackupRestore
 
     DatabaseConfiguration.new(
       config["backup_host"] || config["host"],
-      config["backup_port"] || config["port"],
+      config["backup_port"] || config["port"] || 5432,
       config["username"] || ENV["USER"] || "postgres",
       config["password"],
       config["database"]
